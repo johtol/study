@@ -25,9 +25,82 @@
     "sidebar": true,
   },
   "components": {
+    "welcome": {
+      "type": "markdown",
+      "path": "tutorial/simple-study/assets/welcome.md",
+      "response": []
+    },
+    "consent": {
+      "type": "markdown",
+      "path": "tutorial/simple-study/assets/consent.md",
+      "response": [],
+      "nextButtonText": "I agree"
+    },
+    "stimulus_1": {
+      "type": "image",
+      "path": "tutorial/simple-study/assets/AI-gender.webp",
+      "nextButtonLocation": "sidebar",
+      "response": [
+        {
+          "id": "women",
+          "type": "radio",
+          "required": true,
+          "prompt": "For which profession did AI generate women the least compared to US census data?",
+          "options": [
+            "Doctor",
+            "Engineer",
+            "Dishwasher",
+            "Janitor"
+          ],
+          "location": "sidebar"
+        },
+        {
+          "id": "men",
+          "type": "radio",
+          "required": true,
+          "prompt": "For which profession did AI generate men the least compared to US census data?",
+          "options": [
+            "Doctor",
+            "Engineer",
+            "Dishwasher",
+            "Janitor",
+            "Cashier"
+          ],
+          "location": "sidebar"
+        }
+      ]
+    },
+    "demographics": {
+      "type": "questionnaire",
+      "response": [
+        {
+          "id": "age",
+          "type": "numerical",
+          "required": true,
+          "prompt": "What is your age?",
+        },
+        {
+          "id": "color",
+          "type": "shortText",
+          required: false,
+          "prompt": "What is your favorite color?"
+        },
+        {
+          "id": "feedback",
+          "type": "longText",
+          "required": false,
+          "prompt": "Do you have any feedback?"
+        }
+      ]
+    }
   },
   "sequence": {
     "order": "fixed",
-    "components": []
+    "components": [
+      "welcome",
+      "consent",
+      "stimulus_1",
+      "demographics"
+    ]
   }
 }
