@@ -488,7 +488,8 @@
       "consent",
       "tutorial",
       {
-        "order": "random",
+        "order": "latinSquare",
+        "numSamples": 3,
         "components": [
           "paintBrush_q1",
           "paintBrush_q2",
