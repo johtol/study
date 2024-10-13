@@ -48,13 +48,36 @@
         "cy": 100,
         "taskid": "click"
       }
+    },
+    "clickCircle2": {
+      "type": "react-component",
+      "nextButtonLocation": "sidebar",
+      "description": "Click on any place inside the box",
+      "instruction": "Click on any place inside the box",
+      "path": "tutorial/advanced-react-component/assets/ClickCircle2.tsx",
+      "response": [
+        {
+          "id": "click2",
+          "prompt": "Is your click within the circle?",
+          "required": true,
+          "location": "sidebar",
+          "type": "iframe"
+        }
+      ],
+      "parameters": {
+        "cx": 200,
+        "cy": 300,
+        "r": 20,
+        "taskid": "click2"
+      }
     }
   },
   "sequence": {
     "order": "fixed",
     "components": [
       "introduction",
-      "clickCircle"
+      "clickCircle",
+      "clickCircle2"
     ]
   }
 }

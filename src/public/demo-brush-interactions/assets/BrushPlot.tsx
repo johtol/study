@@ -15,6 +15,7 @@ import { Bar } from './Bar';
 import { StimulusParams } from '../../../store/types';
 import { BrushParams, BrushState, SelectionType } from './types';
 
+// setAnswer is passed to all react graphs and the provenance graph (stored in the same location as the event and data)
 export function BrushPlot({ parameters, setAnswer }: StimulusParams<BrushParams>) {
   const [filteredTable, setFilteredTable] = useState<ColumnTable | null>(null);
   const [brushState, setBrushState] = useState<BrushState>({
@@ -61,7 +62,7 @@ export function BrushPlot({ parameters, setAnswer }: StimulusParams<BrushParams>
       state.all = { brush: currBrush };
       return state;
     });
-
+    // initial state
     const trrackInst = initializeTrrack({
       registry: reg,
       initialState: {
