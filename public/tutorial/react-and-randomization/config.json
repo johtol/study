@@ -489,15 +489,11 @@
       "tutorial",
       {
         "order": "latinSquare",
-        numSamples: 1,
+        numSamples: 2,
         "components": [
-            "paintBrush_q1",
-            "paintBrush_q2"
-        ]
-      },
-      {
+           {
         "order": "latinSquare",
-        numSamples: 1,
+        numSamples: 2,
         "components": [
           "rectangleBrush_q1",
           "rectangleBrush_q2"
@@ -505,7 +501,7 @@
       },
       {
         "order": "latinSquare",
-        numSamples: 1,
+        numSamples: 2,
         "components": [
           "axisBrush_q1",
           "axisBrush_q2"
@@ -513,12 +509,23 @@
       },
       {
         "order": "latinSquare",
-        numSamples: 1,
+        numSamples: 2,
         "components": [
           "sliderBrush_q1",
           "sliderBrush_q2"
         ]
       },
+          {
+        "order": "latinSquare",
+        numSamples: 2,
+        "components": [
+          "paintBrush_q1",
+          "paintBrush_q2"
+        ]
+      }
+        ]
+      },
+
       "post-study-survey",
       "survey"
     ]
